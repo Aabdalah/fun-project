@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Project 7</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            height: 100vh;
+        }
+        .container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container:hover .circle{
+            width: 190px;
+            height: 190px;
+        }
+        .container:hover p{
+            color: black;
+        }
+        .circle{
+            background-color: #cec17a;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: width 0.3s, height 0.3s;
+            cursor: pointer;
+        }
+        .switch{
+            border-radius: 50%;
+            background-color: #ffb800;
+            width: 80px;
+            height: 80px;
+            border: 10px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            position: relative;
+        }
+        p{
+            position: absolute;
+            left: -55px;
+            top: -30px;
+            transform: rotate(-45deg);
+            width: 75px;
+            text-align: center;
+            color: transparent;
+            transition: color 0.3s;
+        }
+        p:nth-of-type(2){
+            left: 45px;
+            transform: rotate(45deg);
+        }
+        p:nth-of-type(3){
+            left: 45px;
+            top: 70px;
+            transform: rotate(135deg);
+        }
+        p:nth-of-type(4){
+            top: 70px;
+            left: -55px;
+            transform: rotate(-135deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle">
+            <div class="switch">Switch
+                <p>First Part</p>
+                <p>Second</p>
+                <p>Third</p>
+                <p>Fourth</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
